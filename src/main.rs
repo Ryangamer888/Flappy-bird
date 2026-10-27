@@ -37,17 +37,13 @@ fn render(t: &str,out: &mut StdoutLock,g: &mut Game, b: &mut Bird, p: &mut Vec<P
   let mut y = SIZE[0];
   while y != 0 {
     draw(out,"#",y,0,37)?;
+    draw(out,"#",y,SIZE[1],37)?;
     y -= 1;
   }
   y = SIZE[1];
   while y != 0 {
     draw(out,"#",0,y,37)?;
     draw(out,"#",SIZE[0],y,37)?;
-    y -= 1;
-  }
-  y = SIZE[0];
-  while y != 0 {
-    draw(out,"#",y,SIZE[1],37)?;
     y -= 1;
   }
   if t == "Title" {
